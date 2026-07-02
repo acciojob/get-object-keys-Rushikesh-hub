@@ -1,14 +1,9 @@
-
-const student = {
-  name: "John",
-  age: 25,
-  city:"Hyderabad"
-};
-
-
-function getKeys(obj) {
-  return Object.keys(obj);
-}
-
-
 console.log(getKeys(student)); 
+
+console.log(
+  getKeys({
+    name: "John",
+    age: 20,
+    city: "New York"
+  })
+);
