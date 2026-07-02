@@ -1,9 +1,7 @@
-console.log(getKeys(student)); 
+const student = {
+  name: "John"
+};
 
-console.log(
-  getKeys({
-    name: "John",
-    age: 20,
-    city: "New York"
-  })
-);
+function getKeys(obj) {
+  return Object.keys(obj);
+}
