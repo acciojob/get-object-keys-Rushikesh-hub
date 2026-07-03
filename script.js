@@ -2,8 +2,13 @@ const student = {
   name: "John"
 };
 
-function getKeys(obj) {
-  return Object.keys(obj);
-}
-console.log(getKeys(student));
-console.log(getKeys({ name: "John", age: 20, city: "New York" }));
+Object.prototype.getKeys = function () {
+  return Object.keys(this);
+};
+
+// Test cases
+const myObj1 = { name: "John", age: 30, city: "New York" };
+console.log(myObj1.getKeys()); // ["name", "age", "city"]
+
+const myObj2 = { name: "John" };
+console.log(myObj2.getKeys()); // ["name"]
